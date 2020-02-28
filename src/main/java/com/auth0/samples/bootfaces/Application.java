@@ -12,6 +12,8 @@ import org.springframework.context.annotation.ComponentScan;
 import javax.faces.webapp.FacesServlet;
 import javax.servlet.DispatcherType;
 import java.util.EnumSet;
+import org.h2.server.web.WebServlet;
+//import javax.servlet.annotation.WebServlet;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @EnableAutoConfiguration
@@ -36,4 +38,19 @@ public class Application extends SpringBootServletInitializer {
         rwFilter.addUrlPatterns("/*");
         return rwFilter;
     }
+    
+    @Bean
+    ServletRegistrationBean h2servletRegistration(){
+        ServletRegistrationBean registrationBean = new ServletRegistrationBean( new WebServlet());
+        registrationBean.addUrlMappings("/console/*");
+        return registrationBean;
+    }
+
+//    @Bean
+//    public ServletRegistrationBean h2servletRegistration() {
+//        ServletRegistrationBean registration = new ServletRegistrationBean(new WebServlet());
+//        registration.addUrlMappings("/console/*");
+//        return registration;
+//    }
+
 }
