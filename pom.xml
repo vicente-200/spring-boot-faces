@@ -19,11 +19,17 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.2.RELEASE</version>
+        <!--<version>1.5.2.RELEASE</version>-->
+        <version>2.2.4.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <!-- Add typical dependencies for a web application -->
     <dependencies>
+        
+   
+        
+        
         <!-- Spring Boot dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -98,11 +104,27 @@
             <artifactId>hsqldb</artifactId>
             <version>2.3.4</version>
         </dependency>
+        
+        
+        <!--
+        <spring boot migration>
+         from 1.5.2.RELEASE to 2.2.4.RELEASE
+        -->
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+            <version>5.2.3</version>
+        </dependency>
+        <!--
+        </spring boot migration>
+        -->
+        <!--        
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
             <version>4.1.2</version>
         </dependency>
+        -->
     </dependencies>
 
     <!-- Package as an executable jar -->
