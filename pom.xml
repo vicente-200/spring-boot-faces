@@ -45,6 +45,7 @@
         </dependency>
 
         <!-- JSF dependencies -->
+<!--        
         <dependency>
             <groupId>org.ocpsoft.rewrite</groupId>
             <artifactId>rewrite-servlet</artifactId>
@@ -84,6 +85,8 @@
             <artifactId>all-themes</artifactId>
             <version>1.0.8</version>
         </dependency>
+        
+        -->
         <!--        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
